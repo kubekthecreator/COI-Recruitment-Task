@@ -21,6 +21,16 @@ Protected - element poprzedzony tym atrybutem może być dostępny wewnątrz kla
 - ***a.	return***
 - b.	catch
 - c.	while
+## 8.	Mając listę String[] drzewa = {„brzoza”, „modrzew”, „grab”, „buk”, „wierzba” } proszę zaproponować wyświetlenie jej na ekranie za pomocą iteratora i za pomocą generyków. 
+## 9.	Proszę zaproponować kod źródłowy metody weryfikującej czy podane 2 wyrazy składają się z tych samych liter np.
+MARA – składa się z 1 litery M, 2 liter A, 1 litery R
+RAMA – składa się z 1 litery R, 2 liter A, 1 litery M
+Podane przykłady składają się z tych samych liter.
+Napisać podstawowe testy jednostkowe dla tej metody (jUnit).
+## 10.	Proszę przedstawić wysokopoziomowy diagram systemu dostępnego przez przeglądarkę internetową, przechowującego informacje o sukcesach sportowych osób znajdujących się w systemie. 
+Proszę zaproponować model logiczny bazy danych, oraz wysokopoziomowo komponenty systemu. Nie ma potrzeby schodzić na poziom kodu źródłowego.
+W sytuacji wymagającej doszczegółowienia wymagań proszę przyjąć własne założenia i opisać je.
+
 ## 11.Napisać test dla poniższego fragmentu kodu.
 ```java
 public void wyslijSms(String numerTel, String trescSms) { 
@@ -49,6 +59,7 @@ public class Test_Task_11 {
     }
 }
 ```
+## 12.	Zaprojektować kontrakt usługi REST w formacie OpenApi oraz małą aplikację springbootową, która zwraca listę książek (bez użycia bazy danych). Usługa powinna umożliwiać filtrowanie po części nazwy książki oraz po numerze IBAN.
 ## 13.	Czy zbiór (Set) może zawierać duplikaty?  
 - a.	Tak
 - ***b.	Nie***
