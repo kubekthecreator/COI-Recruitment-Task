@@ -4,29 +4,6 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Task_17 {
-//    private LocalDate parsePeselToDate(String pesel){
-//        int month = Integer.parseInt(pesel.substring(2,4));
-//        int day = Integer.parseInt(pesel.substring(4,6));
-//        StringBuilder yearBuilder = new StringBuilder(pesel.substring(0, 2));
-//        int year;
-//        if(month>80){
-//            yearBuilder.insert(0, "18");
-//            month-=80;
-//        }else if(month>=21 && month<=32){
-//            yearBuilder.insert(0, "20");
-//            month-=20;
-//        }else{
-//            yearBuilder.insert(0, "19");
-//        }
-//        year = Integer.parseInt(String.valueOf(yearBuilder));
-//        return LocalDate.of(year, month, day);
-//    }
-//    public boolean checkLegalAge(String pesel){
-//        LocalDate birthday = parsePeselToDate(pesel);
-//        LocalDate today = LocalDate.now();
-//        Period period = Period.between(birthday, today);
-//        return period.getYears()>=18;
-//    }
 private byte PESEL[] = new byte[11];
     private boolean valid = false;
 
