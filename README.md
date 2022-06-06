@@ -21,6 +21,49 @@ Protected - element poprzedzony tym atrybutem może być dostępny wewnątrz kla
 - ***a.	return***
 - b.	catch
 - c.	while
+## 8.	Mając listę String[] drzewa = {„brzoza”, „modrzew”, „grab”, „buk”, „wierzba” } proszę zaproponować wyświetlenie jej na ekranie za pomocą iteratora i za pomocą generyków.
+Rozwiązanie w postaci kodu COI-Recruitment-Task/src/main/Task_8.java
+## 9.	Proszę zaproponować kod źródłowy metody weryfikującej czy podane 2 wyrazy składają się z tych samych liter np.
+MARA – składa się z 1 litery M, 2 liter A, 1 litery R
+RAMA – składa się z 1 litery R, 2 liter A, 1 litery M
+Podane przykłady składają się z tych samych liter.
+Napisać podstawowe testy jednostkowe dla tej metody (jUnit).
+
+Rozwiązanie w postaci kodu COI-Recruitment-Task/src/main/Task_9.java
+
+## 10.	Proszę przedstawić wysokopoziomowy diagram systemu dostępnego przez przeglądarkę internetową, przechowującego informacje o sukcesach sportowych osób znajdujących się w systemie. 
+Proszę zaproponować model logiczny bazy danych, oraz wysokopoziomowo komponenty systemu. Nie ma potrzeby schodzić na poziom kodu źródłowego.
+W sytuacji wymagającej doszczegółowienia wymagań proszę przyjąć własne założenia i opisać je.
+
+## 11.Napisać test dla poniższego fragmentu kodu.
+```java
+public void wyslijSms(String numerTel, String trescSms) { 
+  smsGateway.send(new Sms(numerTel, trescSms));
+}
+```
+##### Bramka rzuca wyjątek SMSGatewayException(„Bramka przeciążona”) w momencie, gdy jest zbyt duże obciążenie bramk.
+```java
+public class Test_Task_11 {
+
+    @Test
+    public void should_throw_SMSGatewayException_when_gate_is_overloaded(){
+        //given
+	private Task_11 task11;
+	task11 = new Task_11();
+        //when
+        SMSGatewayException result = assertThrows(SMSGatewayException.class,
+                this::testGateway);
+        //then
+        assertEquals(SMSGatewayEnum.GATE_OVERLOADED.getMessage(), result.getMessage());
+    }
+    private void testGateway() throws SMSGatewayException {
+        for(;;){
+            task11.wyslijSms(070043111, "testing");
+        }
+    }
+}
+```
+## 12.	Zaprojektować kontrakt usługi REST w formacie OpenApi oraz małą aplikację springbootową, która zwraca listę książek (bez użycia bazy danych). Usługa powinna umożliwiać filtrowanie po części nazwy książki oraz po numerze IBAN.
 ## 13.	Czy zbiór (Set) może zawierać duplikaty?  
 - a.	Tak
 - ***b.	Nie***
@@ -76,6 +119,7 @@ private static String getElement(List list, Integer number) {
     return (list).get(number).toString();
 }
 ```
+Rozwiązanie również w postaci kodu COI-Recruitment-Task/src/main/Task_18.java
 ## 19.	Czym różnią się poniższe zapisy i który jest preferowany oraz dlaczego:
 ```java
 public void test(String wartosc) {
@@ -101,3 +145,4 @@ GET pobiera określony zasób według określonego wcześniej identyfikatora, na
 ```java
 public void test(String…args){}
 ```
+Rpzwiązanie w postaci kodu COI-Recruitment-Task/src/main/Task_22.java
