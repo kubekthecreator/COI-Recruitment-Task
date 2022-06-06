@@ -21,6 +21,34 @@ Protected - element poprzedzony tym atrybutem może być dostępny wewnątrz kla
 - ***a.	return***
 - b.	catch
 - c.	while
+## 11.Napisać test dla poniższego fragmentu kodu.
+```java
+public void wyslijSms(String numerTel, String trescSms) { 
+  smsGateway.send(new Sms(numerTel, trescSms));
+}
+```
+##### Bramka rzuca wyjątek SMSGatewayException(„Bramka przeciążona”) w momencie, gdy jest zbyt duże obciążenie bramk.
+```java
+public class Test_Task_11 {
+
+    @Test
+    public void should_throw_SMSGatewayException_when_gate_is_overloaded(){
+        //given
+	private Task_11 task11;
+	task11 = new Task_11();
+        //when
+        SMSGatewayException result = assertThrows(SMSGatewayException.class,
+                this::testGateway);
+        //then
+        assertEquals(SMSGatewayEnum.GATE_OVERLOADED.getMessage(), result.getMessage());
+    }
+    private void testGateway() throws SMSGatewayException {
+        for(;;){
+            task11.wyslijSms(070043111, "testing");
+        }
+    }
+}
+```
 ## 13.	Czy zbiór (Set) może zawierać duplikaty?  
 - a.	Tak
 - ***b.	Nie***
